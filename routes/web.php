@@ -18,6 +18,9 @@ Route::get('/update/{id}', [TutorController::class, 'getUpdateView'])->name('get
 
 Route::post('/update/{id}', [TutorController::class, 'update'])->name('update');
 
+Route::post('destroy/{id}', [TutorController::class, 'destroy'])->name('destroy');
+
+
 
 //Route::get('/{any}', [TutorsController::class, 'list'])->where('any', '.*')->name('list');
 

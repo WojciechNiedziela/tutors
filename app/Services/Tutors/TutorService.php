@@ -31,5 +31,11 @@ class TutorService
         $tutor->update($newTutor);
     }
 
+    public function destroy($id)
+    {
+        return $this->tutorModel->destroy($id);
+
+    }
+
 
 }

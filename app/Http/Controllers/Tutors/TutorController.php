@@ -51,5 +51,11 @@ class TutorController extends Controller
         return redirect()->route('list');
     }
 
+    public function destroy($id)
+    {
+        $this->tutorService->destroy($id);
+        return redirect()->route('list');
+    }
+
     
 }

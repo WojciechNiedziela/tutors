@@ -24,5 +24,11 @@
             <button type='submit'>Zaktualizuj</button>
         </div>
     </form>
+
+    <form action=" {{ route('destroy', ['id' => $tutor->id]) }}" method="post">
+        <div>
+            <button type='submit'>Usuń</button>
+        </div>
+    </form>
 </body>
 </html>
