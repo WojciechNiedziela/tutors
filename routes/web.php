@@ -14,6 +14,10 @@ Route::get('/create', [TutorController::class, 'getCreateView'])->name('getCreat
 
 Route::post('/create', [TutorController::class, 'create'])->name('create');
 
+Route::get('/update/{id}', [TutorController::class, 'getUpdateView'])->name('getUpdateView');
+
+Route::post('/update/{id}', [TutorController::class, 'update'])->name('update');
+
 
 //Route::get('/{any}', [TutorsController::class, 'list'])->where('any', '.*')->name('list');
 

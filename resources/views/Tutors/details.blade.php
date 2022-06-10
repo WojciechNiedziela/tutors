@@ -19,5 +19,10 @@
             <li>Doświadcznie: {{ $tutor->experience}}</li>
 
     </ul>
+    <form action=" {{ route('update', ['id' => $tutor->id]) }}" method="get">
+        <div>
+            <button type='submit'>Zaktualizuj</button>
+        </div>
+    </form>
 </body>
 </html>
