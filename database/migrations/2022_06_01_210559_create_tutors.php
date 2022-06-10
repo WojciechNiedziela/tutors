@@ -23,6 +23,8 @@ return new class extends Migration
             $table->integer("grade")->nullable();
             $table->text("education")->nullable();
             $table->text("experience")->nullable();
+            $table->timestamps();
+
 
         });
     }

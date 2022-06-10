@@ -35,6 +35,13 @@
         </form>
     </div>
 
+    <form action="{{ route('create') }}" method="get">
+            <div>
+                <button type="submit">Dodaj korepytetora</button>
+            </div>
+    </form>
+
+
 
     <table>
         <thead>
