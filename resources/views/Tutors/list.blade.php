@@ -22,12 +22,8 @@
 
             </div>
             <div style="display: inline-block; margin:10px;">
-                <label for="name">Imię</label>
+                <label for="name">Imię i nazwisko</label>
                     <input type="text" name="name" id="name">
-            </div>
-            <div style="display: inline-block; margin:10px;">
-                <label for="lastName">Nazwisko</label>
-                    <input type="text" name="lastName" id="lastName">
             </div>
             <div>
                 <button type="submit">Filtruj</button>
@@ -40,15 +36,11 @@
                 <button type="submit">Dodaj korepytetora</button>
             </div>
     </form>
-
-
-
     <table>
         <thead>
             <tr>
                 <th>Lp.</th>
-                <th>Imie</th>
-                <th>Nazwisko</th>
+                <th>Imię i nazwisko</th>
                 <th>Przdemiot</th>
                 <th>Ocena</th>
                 <th>Szczegóły</th>
@@ -59,7 +51,6 @@
             <tr>
                 <td>{{$loop->iteration}}</td>
                 <td>{{ $tutor->name }}</td>
-                <td>{{ $tutor->lastName }}</td>
                 <td>{{ $tutor->subject }}</td>
                 <td>{{ $tutor->grade }}</td>
                 <td> <a href="{{ route('details', ['id' => $tutor->id]) }}"> Szczegóły </a> </td>

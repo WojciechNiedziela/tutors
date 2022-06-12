@@ -4,7 +4,6 @@ namespace App\Services\Tutors;
 
 use App\Models\Tutors\Tutor;
 
-
 class TutorsService
 {
 
@@ -15,12 +14,10 @@ class TutorsService
         $this->tutorModel = $tutorModel;
     }
 
-    public function list($name, $lastName, $email, $phoneNumber, $subject, $grade, $education, $experience)
+    public function list($name, $email, $phoneNumber, $subject, $grade, $education, $experience)
     {
-
-        return $this->tutorModel->filterByName($name)->filterByLastName($lastName)->filterByEmail($email)->filterByPhoneNumber($phoneNumber)
+        return $this->tutorModel->filterByName($name)->filterByEmail($email)->filterByPhoneNumber($phoneNumber)
         ->filterBySubject($subject)->filterByGrade($grade)->filterByEducation($education)->filterByExperience($experience)->get();
     }
-
 
 }

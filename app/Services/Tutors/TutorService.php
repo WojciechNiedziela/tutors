@@ -4,7 +4,6 @@ namespace App\Services\Tutors;
 
 use App\Models\Tutors\Tutor;
 
-
 class TutorService
 {
 
@@ -34,8 +33,11 @@ class TutorService
     public function destroy($id)
     {
         return $this->tutorModel->destroy($id);
-
     }
 
+    public function sendEmail($id)
+    {
+        $tutor = $this->tutorModel->find($id);
+    }
 
 }

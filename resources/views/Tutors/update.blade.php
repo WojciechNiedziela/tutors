@@ -7,15 +7,12 @@
     <title>Update samochodu</title>
 </head>
 <body>
+    <h1>LOGO</h1>   
     <div class="container">
         <form action=" {{ route('update', ['id' => $tutor->id]) }}" method="post">
         <div>
-            <label for="">Imię</label>
+            <label for="">Imię i nazwisko</label>
             <input type="text" name="name" id="name" value = " {{ $tutor-> name}}">
-        </div>
-        <div>
-            <label for="">Nazwisko</label>
-            <input type="text" name="lastName" id="lastName" value = " {{ $tutor-> lastName}}">
         </div>
         <div>
             <label for="">Email</label>
@@ -42,6 +39,9 @@
             <button type='submit'>Zaktualizuj</button>
         </div>
         </form>
+        <div class="nav">
+            <a href="{{route('list')}}"> Powrót do strony głównej </a>
+        </div>
     </div>
 </body>
 </html>

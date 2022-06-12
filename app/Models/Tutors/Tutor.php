@@ -11,7 +11,6 @@ class Tutor extends Model
 
     protected $fillable=['name', 'lastName', 'email', 'phoneNumber', 'subject', 'grade', 'education', 'experience', 'created_at', 'updated_at'];
 
-
     public function scopeFilterByName($query, $name)
     {
         return $query->where('name','like', '%'. $name . '%');

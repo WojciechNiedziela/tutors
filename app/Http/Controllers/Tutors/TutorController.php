@@ -7,7 +7,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Services\Tutors\TutorService;
 
-
 class TutorController extends Controller
 {
 
@@ -18,10 +17,8 @@ class TutorController extends Controller
         $this->tutorService = $tutorService;
     }
 
-
     public function details($id)
     {
-        //$tutor = DB::table('tutors')->find($id);
         $tutor = $this->tutorService->details($id);
         return view('tutors.details', ['tutor' => $tutor]);
     }
@@ -55,6 +52,11 @@ class TutorController extends Controller
     {
         $this->tutorService->destroy($id);
         return redirect()->route('list');
+    }
+
+    public function sendEmail($id)
+    {
+        
     }
 
     

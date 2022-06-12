@@ -9,8 +9,7 @@
 <body>
     <h1>LOGO</h1>
     <ul>
-            <li>Imię: {{$tutor->name}}</li>
-            <li>Nazwisko: {{$tutor->lastName}}</li>
+            <li>Imię i Nazwisko: {{$tutor->name}}</li>
             <li>Email: {{$tutor->email}}</li>
             <li>Numer telefonu: {{$tutor->phoneNumber}}</li>
             <li>Przedmiot: {{ $tutor->subject}}</li>
@@ -30,5 +29,13 @@
             <button type='submit'>Usuń</button>
         </div>
     </form>
+    <form action=" {{ route('sendEmail', ['id' => $tutor->id]) }}" method="get">
+        <div>
+            <button type='submit'>Wyślij email</button>
+        </div>
+    </form>
+    <div class="nav">
+            <a href="{{route('list')}}"> Powrót do strony głównej </a>
+    </div>
 </body>
 </html>

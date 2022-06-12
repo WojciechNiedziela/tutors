@@ -7,19 +7,12 @@
     <title>Dodaj korepytetora</title>
 </head>
 <body>
+<h1>LOGO</h1>   
 <div class="container">
-        <div class="nav">
-            <a href="{{route('list')}}"> Korepytetorzy </a>
-        </div>
         <form action=" {{ route('create') }}" method="post">
-            @csrf
         <div>
-            <label for="">Imię</label>
+            <label for="">Imię i nazwisko</label>
             <input type="text" name="name" id="name">
-        </div>
-        <div>
-            <label for="">Nazwisko</label>
-            <input type="text" name="lastName" id="lastName">
         </div>
         <div>
             <label for="">Email</label>
@@ -49,6 +42,9 @@
             <button type='submit'>Dodaj</button>
         </div>
         </form>
+        <div class="nav">
+            <a href="{{route('list')}}"> Powrót do strony głównej </a>
+        </div>
     </div>
 </body>
 </html>

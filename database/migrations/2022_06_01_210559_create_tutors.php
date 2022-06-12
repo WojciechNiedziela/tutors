@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('tutors', function (Blueprint $table) {
             $table->id();
             $table->string("name")->nullable();
-            $table->string("lastName")->nullable();
             $table->string("email")->nullable();
             $table->string("phoneNumber")->nullable();
             $table->string("subject")->nullable();
