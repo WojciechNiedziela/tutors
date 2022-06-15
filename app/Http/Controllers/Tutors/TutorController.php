@@ -32,7 +32,7 @@ class TutorController extends Controller
     {
         $tutor = $request->all();
         $this->tutorService->create($tutor);
-        return redirect()->route('create');
+        return redirect()->route('list');
     }
 
     public function getUpdateView($id)
