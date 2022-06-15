@@ -50,10 +50,10 @@
             @foreach ($tutors as $tutor)
             <tr>
                 <td>{{$loop->iteration}}</td>
-                <td>{{ $tutor->name }}</td>
+                <td>{{ $tutor->name }} {{ $tutor->lastName }}</td>
                 <td>{{ $tutor->subject }}</td>
                 <td>{{ $tutor->grade }}</td>
-                <td> <a href="{{ route('details', ['id' => $tutor->id]) }}"> Szczegóły </a> </td>
+                <td> <a href="{{ route('show', ['id' => $tutor->id]) }}"> Szczegóły </a> </td>
             </tr>
             @endforeach
         </tbody>

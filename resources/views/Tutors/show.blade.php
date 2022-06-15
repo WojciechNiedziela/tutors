@@ -9,7 +9,7 @@
 <body>
     <h1>LOGO</h1>
     <ul>
-            <li>Imię i Nazwisko: {{$tutor->name}}</li>
+            <li>Imię i Nazwisko: {{ $tutor->name }} {{ $tutor->lastName }}</li>
             <li>Email: {{$tutor->email}}</li>
             <li>Numer telefonu: {{$tutor->phoneNumber}}</li>
             <li>Przedmiot: {{ $tutor->subject}}</li>

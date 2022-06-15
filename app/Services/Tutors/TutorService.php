@@ -14,7 +14,7 @@ class TutorService
         $this->tutorModel = $tutorModel;
     }
 
-    public function details($id)
+    public function show($id)
     {
         return $this->tutorModel->find($id);
     }
@@ -26,7 +26,7 @@ class TutorService
 
     public function update($id, $newTutor)
     {
-        $tutor = $this->details($id);
+        $tutor = $this->show($id);
         $tutor->update($newTutor);
     }
 

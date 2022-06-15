@@ -21,7 +21,7 @@ class TutorsSeeder extends Seeder
         $faker = Factory::create();
         $data=[];
         for($i=0; $i<50; $i++){
-            $data[] = ["name"=>$faker->name, "email" => $faker->email, "phoneNumber" => $faker->numerify('###-###-###'),
+            $data[] = ["name"=>$faker->firstName, "lastName"=>$faker->lastName, "email" => $faker->email, "phoneNumber" => $faker->numerify('###-###-###'),
             "subject" => $faker->name, "grade" => $faker->numberBetween(0, 6), "education" => $faker->text, "experience" => $faker->text];
         }
         DB::table("tutors")->insert($data);

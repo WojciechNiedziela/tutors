@@ -17,10 +17,10 @@ class TutorController extends Controller
         $this->tutorService = $tutorService;
     }
 
-    public function details($id)
+    public function show($id)
     {
-        $tutor = $this->tutorService->details($id);
-        return view('tutors.details', ['tutor' => $tutor]);
+        $tutor = $this->tutorService->show($id);
+        return view('tutors.show', ['tutor' => $tutor]);
     }
 
     public function getCreateView()
@@ -37,7 +37,7 @@ class TutorController extends Controller
 
     public function getUpdateView($id)
     {
-        $tutor = $this->tutorService->details($id);
+        $tutor = $this->tutorService->show($id);
         return view('tutors.update', ['tutor' => $tutor]);
     }
 

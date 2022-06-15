@@ -9,7 +9,7 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/list', [TutorsController::class, 'list'])->name('list');
 
-Route::get('/details/{id}', [TutorController::class, 'details'])->name('details');
+Route::get('/show/{id}', [TutorController::class, 'show'])->name('show');
 
 Route::get('/create', [TutorController::class, 'getCreateView'])->name('getCreateView');
 
@@ -25,7 +25,7 @@ Route::get('sendEmail/{id}', [TutorController::class, 'sendEmail'])->name('sendE
 
 
 
-//Route::get('/{any}', [TutorsController::class, 'list'])->where('any', '.*')->name('list');
+Route::get('/{any}', [TutorsController::class, 'list'])->where('any', '.*')->name('home');
 
 //Route::middleware(['auth'])->group(function(){
 

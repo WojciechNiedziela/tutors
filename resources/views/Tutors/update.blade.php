@@ -11,8 +11,12 @@
     <div class="container">
         <form action=" {{ route('update', ['id' => $tutor->id]) }}" method="post">
         <div>
-            <label for="">Imię i nazwisko</label>
+            <label for="">Imię</label>
             <input type="text" name="name" id="name" value = " {{ $tutor-> name}}">
+        </div>
+        <div>
+            <label for="">Nazwisko</label>
+            <input type="text" name="lastName" id="lastName" value = " {{ $tutor-> lastName}}">
         </div>
         <div>
             <label for="">Email</label>
