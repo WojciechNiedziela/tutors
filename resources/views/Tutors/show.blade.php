@@ -18,24 +18,24 @@
             <li>Doświadcznie: {{ $tutor->experience}}</li>
 
     </ul>
-    <form action=" {{ route('update', ['id' => $tutor->id]) }}" method="get">
+    <form action=" {{ route('tutors.update', ['id' => $tutor->id]) }}" method="get">
         <div>
             <button type='submit'>Zaktualizuj</button>
         </div>
     </form>
 
-    <form action=" {{ route('destroy', ['id' => $tutor->id]) }}" method="post">
+    <form action=" {{ route('tutors.destroy', ['id' => $tutor->id]) }}" method="post">
         <div>
             <button type='submit'>Usuń</button>
         </div>
     </form>
-    <form action=" {{ route('sendEmail', ['id' => $tutor->id]) }}" method="get">
+    <form action=" {{ route('tutors.sendEmail', ['id' => $tutor->id]) }}" method="get">
         <div>
             <button type='submit'>Wyślij email</button>
         </div>
     </form>
     <div class="nav">
-            <a href="{{route('list')}}"> Powrót do strony głównej </a>
+            <a href="{{route('tutors.list')}}"> Powrót do strony głównej </a>
     </div>
 </body>
 </html>

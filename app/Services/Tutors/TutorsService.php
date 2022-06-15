@@ -18,6 +18,7 @@ class TutorsService
     {
         return $this->tutorModel->filterByName($name)->filterByEmail($email)->filterByPhoneNumber($phoneNumber)
         ->filterBySubject($subject)->filterByGrade($grade)->filterByEducation($education)->filterByExperience($experience)->get();
+        // return $this->tutorModel->filterByName($name)
     }
 
 }

@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="container">
-        <form action=" {{ route('sendEmail', ['id' => $tutor->id]) }}" method="get">
+        <form action=" {{ route('tutors.sendEmail', ['id' => $tutor->id]) }}" method="get">
         <div>
             <label for="">Odbiorca</label>
             <input type="text" name="name" id="name" value = " {{ $tutor-> name}}" readonly>

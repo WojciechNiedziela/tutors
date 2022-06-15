@@ -9,7 +9,7 @@
 <body>
     <h1>LOGO</h1>   
     <div class="container">
-        <form action=" {{ route('update', ['id' => $tutor->id]) }}" method="post">
+        <form action=" {{ route('tutors.update', ['id' => $tutor->id]) }}" method="post">
         <div>
             <label for="">Imię</label>
             <input type="text" name="name" id="name" value = " {{ $tutor-> name}}">
@@ -44,7 +44,7 @@
         </div>
         </form>
         <div class="nav">
-            <a href="{{route('list')}}"> Powrót do strony głównej </a>
+            <a href="{{route('tutors.list')}}"> Powrót do strony głównej </a>
         </div>
     </div>
 </body>

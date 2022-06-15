@@ -10,7 +10,7 @@
     <h1>LOGO</h1>   
     
     <div class="filtrs">
-        <form action="{{ route('list') }}" method="get">
+        <form action="{{ route('tutors.list') }}" method="get">
             <div style="display: inline-block; margin:10px;">   
                 <label for="subject">Przedmiot:</label>
                     <select name="subject" id="subject">
@@ -31,7 +31,7 @@
         </form>
     </div>
 
-    <form action="{{ route('create') }}" method="get">
+    <form action="{{ route('tutors.create') }}" method="get">
             <div>
                 <button type="submit">Dodaj korepytetora</button>
             </div>
@@ -53,7 +53,7 @@
                 <td>{{ $tutor->name }} {{ $tutor->lastName }}</td>
                 <td>{{ $tutor->subject }}</td>
                 <td>{{ $tutor->grade }}</td>
-                <td> <a href="{{ route('show', ['id' => $tutor->id]) }}"> Szczegóły </a> </td>
+                <td> <a href="{{ route('tutors.show', ['id' => $tutor->id]) }}"> Szczegóły </a> </td>
             </tr>
             @endforeach
         </tbody>

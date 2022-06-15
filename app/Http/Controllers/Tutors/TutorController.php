@@ -32,7 +32,7 @@ class TutorController extends Controller
     {
         $tutor = $request->all();
         $this->tutorService->create($tutor);
-        return redirect()->route('list');
+        return redirect()->route('tutors.list');
     }
 
     public function getUpdateView($id)
@@ -45,13 +45,13 @@ class TutorController extends Controller
     {
         $newTutor = $request->all();
         $this->tutorService->update($id, $newTutor);
-        return redirect()->route('list');
+        return redirect()->route('tutors.list');
     }
 
     public function destroy($id)
     {
         $this->tutorService->destroy($id);
-        return redirect()->route('list');
+        return redirect()->route('tutors.list');
     }
 
     public function sendEmail($id)
