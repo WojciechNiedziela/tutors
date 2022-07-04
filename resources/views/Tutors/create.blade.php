@@ -10,6 +10,10 @@
 <h1>LOGO</h1>   
 <div class="container">
         <form action=" {{ route('tutors.create') }}" method="post">
+        <div class="nav">
+            <a href="{{route('tutors.list')}}"> Powrót do strony głównej </a>
+        </div>
+        <br>
         <div>
             <label for="">Imię</label>
             <input type="text" name="name" id="name">
@@ -46,9 +50,6 @@
             <button type='submit'>Dodaj</button>
         </div>
         </form>
-        <div class="nav">
-            <a href="{{route('tutors.list')}}"> Powrót do strony głównej </a>
-        </div>
     </div>
 </body>
 </html>

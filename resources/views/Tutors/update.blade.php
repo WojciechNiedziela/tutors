@@ -8,6 +8,12 @@
 </head>
 <body>
     <h1>LOGO</h1>   
+    
+    <div class="nav">
+            <a href="{{route('tutors.list')}}"> Powrót do strony głównej </a>
+    </div>
+    <br>
+
     <div class="container">
         <form action=" {{ route('tutors.update', ['id' => $tutor->id]) }}" method="post">
         <div>
@@ -43,9 +49,7 @@
             <button type='submit'>Zaktualizuj</button>
         </div>
         </form>
-        <div class="nav">
-            <a href="{{route('tutors.list')}}"> Powrót do strony głównej </a>
-        </div>
+        
     </div>
 </body>
 </html>

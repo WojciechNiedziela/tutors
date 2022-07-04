@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,9 @@
 </head>
 <body>
     <h1>LOGO</h1>
+    <div class="nav">
+            <a href="{{route('tutors.list')}}"> Powrót do strony głównej </a>
+    </div>
     <ul>
             <li>Imię i Nazwisko: {{ $tutor->name }} {{ $tutor->lastName }}</li>
             <li>Email: {{$tutor->email}}</li>
@@ -34,8 +38,5 @@
             <button type='submit'>Wyślij email</button>
         </div>
     </form>
-    <div class="nav">
-            <a href="{{route('tutors.list')}}"> Powrót do strony głównej </a>
-    </div>
 </body>
 </html>

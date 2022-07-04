@@ -20,13 +20,8 @@ class TutorsController extends Controller
     {
         $name = $request->get('name');
         $lastName = $request->get('lastName');
-        $email = $request->get('email');
-        $phoneNumber = $request->get('phoneNumber');
         $subject=$request->get('subject');
-        $grade = $request->get('grade');
-        $education = $request->get('education');
-        $experience = $request->get('experience');
-        $tutors = $this->tutorsService->list($name, $lastName, $email, $phoneNumber, $subject, $grade, $education, $experience);
+        $tutors = $this->tutorsService->list($name, $lastName, $subject);
         return view('tutors.list', ['tutors' => $tutors]);
     }
 }
