@@ -29,7 +29,7 @@
             <button type='submit'>Usuń</button>
         </div>
     </form>
-    <form action=" {{ route('tutors.sendEmail', ['id' => $tutor->id]) }}" method="get">
+    <form action=" {{ route('sendEmailView', ['id' => $tutor->id]) }}" method="get">
         <div>
             <button type='submit'>Wyślij email</button>
         </div>

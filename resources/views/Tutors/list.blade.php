@@ -22,15 +22,19 @@
 
             </div>
             <div style="display: inline-block; margin:10px;">
-                <label for="name">Imię i nazwisko</label>
+                <label for="name">Imię</label>
                     <input type="text" name="name" id="name">
+            </div>
+            <div style="display: inline-block; margin:10px;">
+                <label for="lastName">Nazwisko</label>
+                    <input type="text" name="lastName" id="lastName">
             </div>
             <div>
                 <button type="submit">Filtruj</button>
             </div>
         </form>
     </div>
-
+    
     <form action="{{ route('tutors.create') }}" method="get">
             <div>
                 <button type="submit">Dodaj korepytetora</button>

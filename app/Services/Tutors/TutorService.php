@@ -35,9 +35,4 @@ class TutorService
         return $this->tutorModel->destroy($id);
     }
 
-    public function sendEmail($id)
-    {
-        $tutor = $this->tutorModel->find($id);
-    }
-
 }
